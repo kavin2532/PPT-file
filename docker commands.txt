@@ -1,0 +1,25 @@
+    1  apt-get update && apt-get install -y docker.io
+    2  docker --version
+    3  which docker --------location of docker
+    4  docker version
+    6  ps -ef | grep dockerd --------------docker demon running
+    7  docker run -d --name nginx nginx -------to pull nginx web server first nginx is name of the image --name is name of the service
+    8  docker ps  -----------list containers
+    9  docker inspect nginx ------to see networking details about nginx
+   10  docker ps
+   11  docker inspect nginx
+   12  docker logs nginx --------logs of nginx
+   13  docker inspect nginx
+   14  curl 172.17.0.2
+   15  docker ps
+   16  docker logs nginx
+   17  docker exec -it nginx bash   --------to execute nginx
+   18  docker ps
+   19  docker images ------list of images and version
+   20  docker kill nginx ----delete nginx
+   21  docker ps
+   22  docker images
+   23  docker ps -a ------------list of start and stop containers
+   24  docker system prune -a -------to clear all the containers and images
+   25  docker run -d -p 8080:80 --name nginx nginx ----to pull nginx with port no. map 8080
+   26  docker run -v /data:/var/lib/mysql --name mysqldb -e MYSQL_ROOT_PASSWORD=root -d mysql -------to pull mysql with volume and environment
